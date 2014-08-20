@@ -1,0 +1,598 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Event Extender</title>
+  </head>
+
+  <body>
+    <header>
+    <h1 class="logo">EventExtender</h1>
+    </header>
+    <div id="content" style="width: 100%;">
+      &nbsp;&nbsp;&nbsp;<a href="index.html">Retourner à l'accueil</a>
+<div class="navv"><h2>Index des fonctions</h2><a href="#random">random</a><br /><a href="#region_id">region_id</a><br /><a href="#terrain_tag">terrain_tag</a><br /><a href="#id_at">id_at</a><br /><a href="#map_id">map_id</a><br /><a href="#max_event_id">max_event_id</a><br /><a href="#percent">percent</a><br /><a href="#color">color</a><br /><a href="#square_passable?">square_passable?</a><br /><a href="#team_size">team_size</a><br /><a href="#gold">gold</a><br /><a href="#steps">steps</a><br /><a href="#play_time">play_time</a><br /><a href="#timer">timer</a><br /><a href="#save_count">save_count</a><br /><a href="#battle_count">battle_count</a><br /><a href="#item_count">item_count</a><br /><a href="#weapon_count">weapon_count</a><br /><a href="#armor_count">armor_count</a><br /><a href="#item_name">item_name</a><br /><a href="#weapon_name">weapon_name</a><br /><a href="#armor_name">armor_name</a><br /><a href="#actor_level">actor_level</a><br /><a href="#actor_experience">actor_experience</a><br /><a href="#actor_hp">actor_hp</a><br /><a href="#actor_mp">actor_mp</a><br /><a href="#actor_max_hp">actor_max_hp</a><br /><a href="#actor_max_mp">actor_max_mp</a><br /><a href="#actor_defense">actor_defense</a><br /><a href="#actor_magic">actor_magic</a><br /><a href="#actor_magic_defense">actor_magic_defense</a><br /><a href="#actor_agility">actor_agility</a><br /><a href="#actor_luck">actor_luck</a><br /><a href="#set_actor_name">set_actor_name</a><br /><a href="#actor_name">actor_name</a><br /><a href="#monster_hp">monster_hp</a><br /><a href="#monster_mp">monster_mp</a><br /><a href="#monster_attack">monster_attack</a><br /><a href="#monster_defense">monster_defense</a><br /><a href="#monster_magic_attack">monster_magic_attack</a><br /><a href="#monster_magic_defense">monster_magic_defense</a><br /><a href="#monster_agility">monster_agility</a><br /><a href="#monster_luck">monster_luck</a><br /><a href="#monster_name">monster_name</a><br /><a href="#troop_size">troop_size</a><br /><a href="#troop_member_id">troop_member_id</a><br /><a href="#troop_member_x">troop_member_x</a><br /><a href="#troop_member_y">troop_member_y</a><br /><a href="#mouse_x">mouse_x</a><br /><a href="#mouse_y">mouse_y</a><br /><a href="#mouse_x_square">mouse_x_square</a><br /><a href="#mouse_y_square">mouse_y_square</a><br /><a href="#mouse_click?">mouse_click?</a><br /><a href="#mouse_trigger?">mouse_trigger?</a><br /><a href="#mouse_repeat?">mouse_repeat?</a><br /><a href="#mouse_release?">mouse_release?</a><br /><a href="#mouse_rect">mouse_rect</a><br /><a href="#point_in_mouse_rect?">point_in_mouse_rect?</a><br /><a href="#mouse_hover_event?">mouse_hover_event?</a><br /><a href="#mouse_clicked_event?">mouse_clicked_event?</a><br /><a href="#mouse_hover_player?">mouse_hover_player?</a><br /><a href="#mouse_clicked_player?">mouse_clicked_player?</a><br /><a href="#last_clicked_event">last_clicked_event</a><br /><a href="#show_cursor_system">show_cursor_system</a><br /><a href="#key_press?">key_press?</a><br /><a href="#key_trigger?">key_trigger?</a><br /><a href="#key_repeat?">key_repeat?</a><br /><a href="#key_release?">key_release?</a><br /><a href="#caps_lock?">caps_lock?</a><br /><a href="#num_lock?">num_lock?</a><br /><a href="#scroll_lock?">scroll_lock?</a><br /><a href="#maj?">maj?</a><br /><a href="#alt_gr?">alt_gr?</a><br /><a href="#key_number">key_number</a><br /><a href="#key_char?">key_char?</a><br /><a href="#event_x">event_x</a><br /><a href="#event_y">event_y</a><br /><a href="#event_screen_x">event_screen_x</a><br /><a href="#event_pixel_x">event_pixel_x</a><br /><a href="#event_pixel_y">event_pixel_y</a><br /><a href="#event_screen_y">event_screen_y</a><br /><a href="#event_direction">event_direction</a><br /><a href="#player_x">player_x</a><br /><a href="#player_y">player_y</a><br /><a href="#player_pixel_x">player_pixel_x</a><br /><a href="#player_pixel_y">player_pixel_y</a><br /><a href="#player_screen_x">player_screen_x</a><br /><a href="#player_screen_y">player_screen_y</a><br /><a href="#player_direction">player_direction</a><br /><a href="#look_at">look_at</a><br /><a href="#squares_between">squares_between</a><br /><a href="#pixels_between">pixels_between</a><br /><a href="#move_to">move_to</a><br /><a href="#jump_to">jump_to</a><br /><a href="#buzz">buzz</a><br /><a href="#collide?">collide?</a><br /><a href="#event_in_screen?">event_in_screen?</a><br /><a href="#player_in_screen?">player_in_screen?</a><br /><a href="#picture_show">picture_show</a><br /><a href="#picture_origine">picture_origine</a><br /><a href="#picture_x">picture_x</a><br /><a href="#picture_y">picture_y</a><br /><a href="#picture_position">picture_position</a><br /><a href="#picture_move">picture_move</a><br /><a href="#picture_wave">picture_wave</a><br /><a href="#picture_flip">picture_flip</a><br /><a href="#picture_angle">picture_angle</a><br /><a href="#picture_rotate">picture_rotate</a><br /><a href="#picture_zoom_x">picture_zoom_x</a><br /><a href="#picture_zoom_y">picture_zoom_y</a><br /><a href="#picture_zoom">picture_zoom</a><br /><a href="#picture_tone">picture_tone</a><br /><a href="#picture_blend">picture_blend</a><br /><a href="#picture_pin">picture_pin</a><br /><a href="#picture_detach">picture_detach</a><br /><a href="#picture_shake">picture_shake</a><br /><a href="#picture_show_enemy">picture_show_enemy</a><br /><a href="#picture_text">picture_text</a><br /><a href="#picture_screen">picture_screen</a><br /><a href="#picture_erase">picture_erase</a><br /><a href="#picture_opacity">picture_opacity</a><br /><a href="#parallax_show">parallax_show</a><br /><a href="#parallax_erase">parallax_erase</a><br /><a href="#parallax_z">parallax_z</a><br /><a href="#parallax_opacity">parallax_opacity</a><br /><a href="#parallax_autoscroll">parallax_autoscroll</a><br /><a href="#parallax_scrollspeed">parallax_scrollspeed</a><br /><a href="#parallax_zoom_x">parallax_zoom_x</a><br /><a href="#parallax_zoom_y">parallax_zoom_y</a><br /><a href="#parallax_zoom">parallax_zoom</a><br /><a href="#parallax_blend">parallax_blend</a><br /><a href="#parallax_tone">parallax_tone</a><br /><a href="#time_year">time_year</a><br /><a href="#time_month">time_month</a><br /><a href="#time_day">time_day</a><br /><a href="#time_hour">time_hour</a><br /><a href="#time_min">time_min</a><br /><a href="#time_sec">time_sec</a><br /><a href="#save_game">save_game</a><br /><a href="#load_game">load_game</a><br /><a href="#save_exists?">save_exists?</a><br /><a href="#delete_save">delete_save</a><br /><a href="#import_variable">import_variable</a><br /><a href="#create_rect_area">create_rect_area</a><br /><a href="#create_circle_area">create_circle_area</a><br /><a href="#create_ellipse_area">create_ellipse_area</a><br /><a href="#create_polygon_area">create_polygon_area</a><br /><a href="#in_area?">in_area?</a><br /><a href="#mouse_hover_area?">mouse_hover_area?</a><br /><a href="#mouse_square_hover_area?">mouse_square_hover_area?</a><br /><a href="#mouse_clicked_area?">mouse_clicked_area?</a><br /><a href="#mouse_triggered_area?">mouse_triggered_area?</a><br /><a href="#mouse_repeated_area?">mouse_repeated_area?</a><br /><a href="#mouse_released_area?">mouse_released_area?</a><br /><a href="#mouse_square_clicked_area?">mouse_square_clicked_area?</a><br /><a href="#mouse_square_triggered_area?">mouse_square_triggered_area?</a><br /><a href="#mouse_square_repeated_area?">mouse_square_repeated_area?</a><br /><a href="#mouse_square_released_area?">mouse_square_released_area?</a><br /><a href="#create_textfield">create_textfield</a><br /><a href="#erase_textfield">erase_textfield</a><br /><a href="#get_textfield_value">get_textfield_value</a><br /><a href="#set_textfield_value">set_textfield_value</a><br /><a href="#activate_textfield">activate_textfield</a><br /><a href="#unactivate_textfield">unactivate_textfield</a><br /><a href="#textfield_actived?">textfield_actived?</a><br /><a href="#unactivate_all_textfield">unactivate_all_textfield</a><br /><a href="#textfield_hover?">textfield_hover?</a><br /><a href="#textfield_clicked?">textfield_clicked?</a><br /><a href="#textfield_visibility">textfield_visibility</a><br /><a href="#textfield_opacity">textfield_opacity</a><br /><a href="#textfield_tone">textfield_tone</a><br /><a href="#server_connect">server_connect</a><br /><a href="#server_send">server_send</a><br /><a href="#server_recv">server_recv</a><br /><a href="#server_wait_recv">server_wait_recv</a><br /><a href="#server_close_connection">server_close_connection</a><br /><a href="#server_single_connect">server_single_connect</a><br /><a href="#server_single_send">server_single_send</a><br /><a href="#server_single_recv">server_single_recv</a><br /><a href="#server_single_wait_recv">server_single_wait_recv</a><br /><a href="#server_single_close_connection">server_single_close_connection</a><br /><a href="#include_page">include_page</a><br /><a href="#invoke_event">invoke_event</a><br /><a href="#windows_username">windows_username</a><br /><a href="#angle_xy">angle_xy</a><br /><a href="#rtp_path">rtp_path</a><br /><a href="#message_height">message_height</a><br /></div><div class='ccc'><h2>Fonctions</h2><div class='d'><h3 id='random' name='random'>random</h3><p class='desc'>Renvoi un nombre aléatoire compris entre Minimum et Maximum</p><p class='args'><ul><li><span class='name_args'>Minimum</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Maximum</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='region_id' name='region_id'>region_id</h3><p class='desc'>Renvoi la région défini sur les coordonnées passées en argument</p><p class='args'><ul><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='terrain_tag' name='terrain_tag'>terrain_tag</h3><p class='desc'>Renvoi le ta de terrain défini sur les coordonnées passées en argument</p><p class='args'><ul><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='id_at' name='id_at'>id_at</h3><p class='desc'>Renvoi l'id de l'évènement à la position donnée. -1 s'il ny en a pas</p><p class='args'><ul><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Couche</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='map_id' name='map_id'>map_id</h3><p class='desc'>Renvoi l'id de la map jouée</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='max_event_id' name='max_event_id'>max_event_id</h3><p class='desc'>Renvoi le plus grand ID d'évènement de la carte</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='percent' name='percent'>percent</h3><p class='desc'>Renvoi le pourcentage de la valeur1 par rapport à la valeur2</p><p class='args'><ul><li><span class='name_args'>valeur1</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>valeur2</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='color' name='color'>color</h3><p class='desc'>Renvoi un objet color selon les valeurs passées</p><p class='args'><ul><li><span class='name_args'>rouge</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>vert</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>bleu</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>alpha</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='square_passable?' name='square_passable?'>square_passable?</h3><p class='desc'>Vérifie si une case est passable</p><p class='args'><ul><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>direction</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='team_size' name='team_size'>team_size</h3><p class='desc'>Renvoi le nombre de membres de l'équipe</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='gold' name='gold'>gold</h3><p class='desc'>Renvoi l'argent possédé par l'équipe</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='steps' name='steps'>steps</h3><p class='desc'>Renvoi le nombre de pas effectué par l'équipe</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='play_time' name='play_time'>play_time</h3><p class='desc'>Renvoi la durée de la partie</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='timer' name='timer'>timer</h3><p class='desc'>Renvoi la valeur du chronomètre</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='save_count' name='save_count'>save_count</h3><p class='desc'>Renvoi le nombre de sauvegarde effectuées</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='battle_count' name='battle_count'>battle_count</h3><p class='desc'>Renvoi le nombre de combats effectuées</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='item_count' name='item_count'>item_count</h3><p class='desc'>Renvoi le nombre d'objets possédés en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='weapon_count' name='weapon_count'>weapon_count</h3><p class='desc'>Renvoi le nombre d'armes possédées en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='armor_count' name='armor_count'>armor_count</h3><p class='desc'>Renvoi le nombre d'armures possédées en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='item_name' name='item_name'>item_name</h3><p class='desc'>Renvoi le nom d'un objets en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='weapon_name' name='weapon_name'>weapon_name</h3><p class='desc'>Renvoi le nom d'une arme en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='armor_name' name='armor_name'>armor_name</h3><p class='desc'>Renvoi le nom d'une armure en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='actor_level' name='actor_level'>actor_level</h3><p class='desc'>Renvoi le niveau d'un acteur en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='actor_experience' name='actor_experience'>actor_experience</h3><p class='desc'>Renvoi l'expérience' d'un acteur en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='actor_hp' name='actor_hp'>actor_hp</h3><p class='desc'>Renvoi le nombre de PV d'un acteur en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='actor_mp' name='actor_mp'>actor_mp</h3><p class='desc'>Renvoi le nombre de MP d'un acteur en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='actor_max_hp' name='actor_max_hp'>actor_max_hp</h3><p class='desc'>Renvoi le nombre maximum de PV d'un acteur en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='actor_max_mp' name='actor_max_mp'>actor_max_mp</h3><p class='desc'>Renvoi le nombre maximum de MP d'un acteur en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='actor_defense' name='actor_defense'>actor_defense</h3><p class='desc'>Renvoi le nombre de points de défense d'un acteur en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='actor_magic' name='actor_magic'>actor_magic</h3><p class='desc'>Renvoi le nombre de points de magie d'un acteur en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='actor_magic_defense' name='actor_magic_defense'>actor_magic_defense</h3><p class='desc'>Renvoi le nombre de points de magie maximum d'un acteur en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='actor_agility' name='actor_agility'>actor_agility</h3><p class='desc'>Renvoi le nombre de points d'agilité' d'un acteur en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='actor_luck' name='actor_luck'>actor_luck</h3><p class='desc'>Renvoi le nombre de points de chance d'un acteur en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='set_actor_name' name='set_actor_name'>set_actor_name</h3><p class='desc'>Modifie le nom de l'acteur référencé par son ID par la valeur de Name</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Name</span>
+<span class='type_args'>string</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='actor_name' name='actor_name'>actor_name</h3><p class='desc'>Renvoi le nom de l'acteur référencé par son ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='monster_hp' name='monster_hp'>monster_hp</h3><p class='desc'>Renvoi le nombre de PV d'un ennemi en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='monster_mp' name='monster_mp'>monster_mp</h3><p class='desc'>Renvoi le nombre de MP d'un ennemi en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='monster_attack' name='monster_attack'>monster_attack</h3><p class='desc'>Renvoi le nombre de points d'attaque d'un ennemi en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='monster_defense' name='monster_defense'>monster_defense</h3><p class='desc'>Renvoi le nombre de points de défense d'un ennemi en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='monster_magic_attack' name='monster_magic_attack'>monster_magic_attack</h3><p class='desc'>Renvoi le nombre de points d'attaque magique d'un ennemi en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='monster_magic_defense' name='monster_magic_defense'>monster_magic_defense</h3><p class='desc'>Renvoi le nombre de points de défense magique d'un ennemi en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='monster_agility' name='monster_agility'>monster_agility</h3><p class='desc'>Renvoi le nombre de points d'agilité d'un ennemi en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='monster_luck' name='monster_luck'>monster_luck</h3><p class='desc'>Renvoi le nombre de points de chance d'un ennemi en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='monster_name' name='monster_name'>monster_name</h3><p class='desc'>Renvoi le nom d'un ennemi en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='troop_size' name='troop_size'>troop_size</h3><p class='desc'>Renvoi le nombre d'ennemis d'un groupe en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='troop_member_id' name='troop_member_id'>troop_member_id</h3><p class='desc'>Renvoi l'ID d'un ennemi en fonction de sa position dans un groupe en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Position</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='troop_member_x' name='troop_member_x'>troop_member_x</h3><p class='desc'>Renvoi la position X (tel que défini dans la BDD) d'un ennemi en fonction de sa position dans un groupe en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Position</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='troop_member_y' name='troop_member_y'>troop_member_y</h3><p class='desc'>Renvoi la position Y (tel que défini dans la BDD) d'un ennemi en fonction de sa position dans un groupe en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Position</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_x' name='mouse_x'>mouse_x</h3><p class='desc'>Renvoi la coordonnées X de la souris (en pixel)</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_y' name='mouse_y'>mouse_y</h3><p class='desc'>Renvoi la coordonnées Y de la souris (en pixel)</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_x_square' name='mouse_x_square'>mouse_x_square</h3><p class='desc'>Renvoi la coordonnées X de la souris (en case)</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_y_square' name='mouse_y_square'>mouse_y_square</h3><p class='desc'>Renvoi la coordonnées Y de la souris (en case)</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_click?' name='mouse_click?'>mouse_click?</h3><p class='desc'>Renvoi True si la touche passée en argument est enfoncée, false sinon</p><p class='args'><ul><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_trigger?' name='mouse_trigger?'>mouse_trigger?</h3><p class='desc'>Renvoi True si la touche passée en argument vient d'être pressée, false sinon</p><p class='args'><ul><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_repeat?' name='mouse_repeat?'>mouse_repeat?</h3><p class='desc'>Renvoi True si la touche passée en argument est enfoncée de manière répetée, false sinon</p><p class='args'><ul><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_release?' name='mouse_release?'>mouse_release?</h3><p class='desc'>Renvoi True si la touche passée en argument vient d'être relachée, false sinon</p><p class='args'><ul><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_rect' name='mouse_rect'>mouse_rect</h3><p class='desc'>Renvoi le rectangle de sélection de la souris</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='point_in_mouse_rect?' name='point_in_mouse_rect?'>point_in_mouse_rect?</h3><p class='desc'>Renvoi true si un point (référencé par X et Y) est dans le rectangle de sélection, false sinon</p><p class='args'><ul><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_hover_event?' name='mouse_hover_event?'>mouse_hover_event?</h3><p class='desc'>Renvoi true si la souris survol un évènement (référencé par son ID), false sinon</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_clicked_event?' name='mouse_clicked_event?'>mouse_clicked_event?</h3><p class='desc'>Renvoi true si la souris clic sur un évènement (référencé par son ID), false sinon</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_hover_player?' name='mouse_hover_player?'>mouse_hover_player?</h3><p class='desc'>Renvoi true si la souris survol le joueur</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_clicked_player?' name='mouse_clicked_player?'>mouse_clicked_player?</h3><p class='desc'>Renvoi true si la souris clic le joueur</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='last_clicked_event' name='last_clicked_event'>last_clicked_event</h3><p class='desc'>Renvoi l'ID du dernier évènement cliqué</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='show_cursor_system' name='show_cursor_system'>show_cursor_system</h3><p class='desc'>Active (true) ou désactive (false) le curseur de Windows</p><p class='args'><ul><li><span class='name_args'>Activation? </span>
+<span class='type_args'>bool</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='key_press?' name='key_press?'>key_press?</h3><p class='desc'>Renvoi True si la touche passée en argument est enfoncée, false sinon</p><p class='args'><ul><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='key_trigger?' name='key_trigger?'>key_trigger?</h3><p class='desc'>Renvoi True si la touche passée en argument vient d'être pressée, false sinon</p><p class='args'><ul><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='key_repeat?' name='key_repeat?'>key_repeat?</h3><p class='desc'>Renvoi True si la touche passée en argument est enfoncée de manière répetée, false sinon</p><p class='args'><ul><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='key_release?' name='key_release?'>key_release?</h3><p class='desc'>Renvoi True si la touche passée en argument vient d'être relachée, false sinon</p><p class='args'><ul><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='caps_lock?' name='caps_lock?'>caps_lock?</h3><p class='desc'>Renvoi true si le clavier est en CAPS LOCK, false sinon</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='num_lock?' name='num_lock?'>num_lock?</h3><p class='desc'>Renvoi true si le clavier est en NUM LOCK, false sinon</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='scroll_lock?' name='scroll_lock?'>scroll_lock?</h3><p class='desc'>Renvoi true si le clavier est en SCROLL LOCK, false sinon</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='maj?' name='maj?'>maj?</h3><p class='desc'>Renvoi true si le clavier est en mode majuscule, false sinon</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='alt_gr?' name='alt_gr?'>alt_gr?</h3><p class='desc'>Renvoi true si la combinaison ALT+GR est enfoncée, false sinon</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='key_number' name='key_number'>key_number</h3><p class='desc'>Renvoi le numéro pressé au clavier, nil si aucun chiffre n'est pressé</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='key_char?' name='key_char?'>key_char?</h3><p class='desc'>Renvoi le caractère pressé au clavier, ne renvoi aucun caractère sinon</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='event_x' name='event_x'>event_x</h3><p class='desc'>Renvoi la position X (en case) d'un évènement en fonction de son ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='event_y' name='event_y'>event_y</h3><p class='desc'>Renvoi la position Y (en case) d'un évènement en fonction de son ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='event_screen_x' name='event_screen_x'>event_screen_x</h3><p class='desc'>Renvoi la position X (en pixel par rapport à l'écran) d'un évènement en fonction de son ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='event_pixel_x' name='event_pixel_x'>event_pixel_x</h3><p class='desc'>Renvoi la position X (en pixel) d'un évènement en fonction de son ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='event_pixel_y' name='event_pixel_y'>event_pixel_y</h3><p class='desc'>Renvoi la position Y (en pixel) d'un évènement en fonction de son ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='event_screen_y' name='event_screen_y'>event_screen_y</h3><p class='desc'>Renvoi la position Y (en pixel par rapport à l'écran) d'un évènement en fonction de son ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='event_direction' name='event_direction'>event_direction</h3><p class='desc'>Renvoi la direction (2,4,6,8) d'un évènement en fonction de son ID</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='player_x' name='player_x'>player_x</h3><p class='desc'>Renvoi la position X (en case) du joueur</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='player_y' name='player_y'>player_y</h3><p class='desc'>Renvoi la position Y (en case) du joueur</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='player_pixel_x' name='player_pixel_x'>player_pixel_x</h3><p class='desc'>Renvoi la position X en pixel du joueur</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='player_pixel_y' name='player_pixel_y'>player_pixel_y</h3><p class='desc'>Renvoi la position Y en pixel du joueur</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='player_screen_x' name='player_screen_x'>player_screen_x</h3><p class='desc'>Renvoi la position X (en pixel par rapport à l'écran) du joueur</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='player_screen_y' name='player_screen_y'>player_screen_y</h3><p class='desc'>Renvoi la position Y (en pixel par rapport à l'écran) du joueur</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='player_direction' name='player_direction'>player_direction</h3><p class='desc'>Renvoi la direction (2,4,6,8) du joueur</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='look_at' name='look_at'>look_at</h3><p class='desc'>Renvoi true si ID 1 regarde ID 2, false sinon</p><p class='args'><ul><li><span class='name_args'>ID 1</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>ID 2</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>portee</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Unites</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='squares_between' name='squares_between'>squares_between</h3><p class='desc'>Renvoi le nombre de cases entre deux évènements (référencés via leurs ID, 0 pour le héros)</p><p class='args'><ul><li><span class='name_args'>ID 1</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>ID 2</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='pixels_between' name='pixels_between'>pixels_between</h3><p class='desc'>Renvoi le nombre de pixels entre deux évènements (référencés via leurs ID, 0 pour le héros)</p><p class='args'><ul><li><span class='name_args'>ID 1</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>ID 2</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='move_to' name='move_to'>move_to</h3><p class='desc'>Déplace l'évènement (référencé par son ID, 0 pour le héros) vers la case référencée par X et Y</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Attendre?</span>
+<span class='type_args'>bool</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='jump_to' name='jump_to'>jump_to</h3><p class='desc'>fait sauter l'évènement (référencé par son ID, 0 pour le héros) vers la case référencée par X et Y</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Attendre?</span>
+<span class='type_args'>bool</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='buzz' name='buzz'>buzz</h3><p class='desc'>fait tressaillir l'évènement (référencé par son ID, 0 pour le héros) </p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='collide?' name='collide?'>collide?</h3><p class='desc'>Renvoi true si  deux évènements (référencés par leurs ID's, 0 pour le héros) sont en collision, false sinon</p><p class='args'><ul><li><span class='name_args'>ID 1</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>ID 2</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='event_in_screen?' name='event_in_screen?'>event_in_screen?</h3><p class='desc'>Renvoi true si l'évènement (référencé par son ID) est dans l'écran</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='player_in_screen?' name='player_in_screen?'>player_in_screen?</h3><p class='desc'>Renvoi true si le joueur est dans l'écran</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='picture_show' name='picture_show'>picture_show</h3><p class='desc'>Affiche l'image</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Nom de l'image</span>
+<span class='type_args'>string</span>
+</li><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Origine (0 = H-G, 1 = centre)</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>zoom X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>zoom Y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Opacité</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Mode de fusion (0 normal, 1 addition, 2 soustraction)</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_origine' name='picture_origine'>picture_origine</h3><p class='desc'>Modifie l'origine d'une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Origine</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_x' name='picture_x'>picture_x</h3><p class='desc'>Modifie la position X d'une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_y' name='picture_y'>picture_y</h3><p class='desc'>Modifie la position Y d'une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_position' name='picture_position'>picture_position</h3><p class='desc'>Modifie la position d'une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_move' name='picture_move'>picture_move</h3><p class='desc'>Déplace l'image (référencée par son ID), les valeurs -1 gardent leurs valeurs initiales</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>zoom X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>zoom Y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Durée</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Opacité</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Mode de fusion (0 normal, 1 addition, 2 soustraction)</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Origine (0 = H-G, 1 = centre)</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_wave' name='picture_wave'>picture_wave</h3><p class='desc'>Fait onduler une image (Référencée par son ID) en fonction d'une amplitude et d'une vitesse</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Amplitude</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Vitesse</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_flip' name='picture_flip'>picture_flip</h3><p class='desc'>Applique une symétrie orthogonale (Axe vertical) à une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_angle' name='picture_angle'>picture_angle</h3><p class='desc'>Modifie l'angle d'inclinaison d'une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Angle</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_rotate' name='picture_rotate'>picture_rotate</h3><p class='desc'>Fait tourner une image (référencée par son ID) à une certaine vitesse</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Vitesse</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_zoom_x' name='picture_zoom_x'>picture_zoom_x</h3><p class='desc'>Modifie le zoom X d'une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Zoom X</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_zoom_y' name='picture_zoom_y'>picture_zoom_y</h3><p class='desc'>Modifie le zoom Y d'une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Zoom Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_zoom' name='picture_zoom'>picture_zoom</h3><p class='desc'>Modifie le zoom d'une image (référencée par son ID), si Zoom Y vaut -1 il prendra la même taille que Zoom X</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Zoom X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Zoom Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_tone' name='picture_tone'>picture_tone</h3><p class='desc'>Modifie la teinte d'une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Rouge</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Vert</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Bleu</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Gris</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_blend' name='picture_blend'>picture_blend</h3><p class='desc'>Modifie le mode de fusion d'une image (référencée par son ID) (0 => normal, 1 addition, 2 soustraction)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Mode de fusion</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_pin' name='picture_pin'>picture_pin</h3><p class='desc'>Fixe le défilement d'une image (référencée par son ID) sur la carte</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_detach' name='picture_detach'>picture_detach</h3><p class='desc'>Annule le fixe du défilement d'une image (référencée par son ID) sur la carte</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_shake' name='picture_shake'>picture_shake</h3><p class='desc'>Fait trembler une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Force</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Vitesse</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Durée</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_show_enemy' name='picture_show_enemy'>picture_show_enemy</h3><p class='desc'>Affiche un ennemi en image en fonction de ses positions de la base de données</p><p class='args'><ul><li><span class='name_args'>ID Image</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>ID du groupe</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Position du monstre</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_text' name='picture_text'>picture_text</h3><p class='desc'>Affiche un text sur un emplacement image (en fonction de son ID)</p><p class='args'><ul><li><span class='name_args'>ID Image</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Texte</span>
+<span class='type_args'>string</span>
+</li><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Taille</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Police</span>
+<span class='type_args'>string</span>
+</li><li><span class='name_args'>Color (Utilisez le formatage Libre et la commande 'color')</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Gras ?</span>
+<span class='type_args'>bool</span>
+</li><li><span class='name_args'>Italique ?</span>
+<span class='type_args'>bool</span>
+</li><li><span class='name_args'>Contour ?</span>
+<span class='type_args'>bool</span>
+</li><li><span class='name_args'>Color contour (Utilisez le formatage Libre et la commande 'color')</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Ombre ?</span>
+<span class='type_args'>bool</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_screen' name='picture_screen'>picture_screen</h3><p class='desc'>Prend une capture d'écran sur une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_erase' name='picture_erase'>picture_erase</h3><p class='desc'>Supprime une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='picture_opacity' name='picture_opacity'>picture_opacity</h3><p class='desc'>Modifie l'opacité d'une image (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Valeur</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='parallax_show' name='parallax_show'>parallax_show</h3><p class='desc'>Crée un panorama</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Nom de l'image</span>
+<span class='type_args'>string</span>
+</li><li><span class='name_args'>Axe Z</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Opacité</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Vitesse automatique X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Vitesse automatique Y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Défilement X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Défilement Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='parallax_erase' name='parallax_erase'>parallax_erase</h3><p class='desc'>Supprime un panorama (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='parallax_z' name='parallax_z'>parallax_z</h3><p class='desc'>change l'axe Z d'un panorama (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Axe Z</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='parallax_opacity' name='parallax_opacity'>parallax_opacity</h3><p class='desc'>change l'opacité d'un panorama (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Opacité</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='parallax_autoscroll' name='parallax_autoscroll'>parallax_autoscroll</h3><p class='desc'>change la vitesse de défilement automatique d'un panorama (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Vitesse X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Vitesse Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='parallax_scrollspeed' name='parallax_scrollspeed'>parallax_scrollspeed</h3><p class='desc'>change la vitesse de défilement d'un panorama (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Vitesse X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Vitesse Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='parallax_zoom_x' name='parallax_zoom_x'>parallax_zoom_x</h3><p class='desc'>change le zoom X d'un panorama (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Zoom X</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='parallax_zoom_y' name='parallax_zoom_y'>parallax_zoom_y</h3><p class='desc'>change le zoom Y d'un panorama (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Zoom Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='parallax_zoom' name='parallax_zoom'>parallax_zoom</h3><p class='desc'>change le zoom d'un panorama (référencée par son ID), si le Zoom Y vaut -1 il prendra la valeur du Zoom X</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Zoom X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Zoom Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='parallax_blend' name='parallax_blend'>parallax_blend</h3><p class='desc'>change le mode de fusion d'un panorama (référencée par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Mode (0: normal, 1:add, 2:sub)</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='parallax_tone' name='parallax_tone'>parallax_tone</h3><p class='desc'>Modifie la teinte d'un panorama (référencé par son ID)</p><p class='args'><ul><li><span class='name_args'>ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Rouge</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Vert</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Bleu</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Gris</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='time_year' name='time_year'>time_year</h3><p class='desc'>Renvoi l'année actuelle</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='time_month' name='time_month'>time_month</h3><p class='desc'>Renvoi le mois actuel (1-12)</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='time_day' name='time_day'>time_day</h3><p class='desc'>Renvoi le jours du mois actuel (1-31)</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='time_hour' name='time_hour'>time_hour</h3><p class='desc'>Renvoi l'heure courante (1->24/0)</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='time_min' name='time_min'>time_min</h3><p class='desc'>Renvoi la minute courante (0->60)</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='time_sec' name='time_sec'>time_sec</h3><p class='desc'>Renvoi la seconde courante (0->60)</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='save_game' name='save_game'>save_game</h3><p class='desc'>Sauvegarde le jeu sur l'emplacement ID</p><p class='args'><ul><li><span class='name_args'>Numéro de sauvegarde</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='load_game' name='load_game'>load_game</h3><p class='desc'>Charge la partie en fonction d'un ID</p><p class='args'><ul><li><span class='name_args'>Numéro de sauvegarde</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Durée de transition</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='save_exists?' name='save_exists?'>save_exists?</h3><p class='desc'>Renvoie true si la sauvegarde numéroté existe, false sinon</p><p class='args'><ul><li><span class='name_args'>Numéro de sauvegarde</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='delete_save' name='delete_save'>delete_save</h3><p class='desc'>Supprime la sauvegarde via son numéro</p><p class='args'><ul><li><span class='name_args'>Numéro de sauvegarde</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='import_variable' name='import_variable'>import_variable</h3><p class='desc'>Importe un interupteur d'une autre sauvegarde</p><p class='args'><ul><li><span class='name_args'>Numéro de la sauvegarde</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>ID de l'interupteur a importer</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='create_rect_area' name='create_rect_area'>create_rect_area</h3><p class='desc'>Crée une zone rectangulaire en fonction de deux points</p><p class='args'><ul><li><span class='name_args'>Point X1</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Point Y1</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Point X2</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Point Y2</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='create_circle_area' name='create_circle_area'>create_circle_area</h3><p class='desc'>Crée une zone circulaire en fonction d'un point et d'un rayon</p><p class='args'><ul><li><span class='name_args'>Point X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Point Y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Rayon</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='create_ellipse_area' name='create_ellipse_area'>create_ellipse_area</h3><p class='desc'>Crée une zone circulaire en fonction d'un point, d'une hauteur et d'une largeur</p><p class='args'><ul><li><span class='name_args'>Point X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Point Y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Largeur</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Hauteur</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='create_polygon_area' name='create_polygon_area'>create_polygon_area</h3><p class='desc'>Crée une zone polygonale en fonction d'une collection de points</p><p class='args'><ul><li><span class='name_args'>Points (sous cette forme [[x,y],[x,y] etc.)</span>
+<span class='type_args'>none</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='in_area?' name='in_area?'>in_area?</h3><p class='desc'>Renvoi true si le point X/Y est dans la zone, false sinon</p><p class='args'><ul><li><span class='name_args'>Zone</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Point X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Point Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_hover_area?' name='mouse_hover_area?'>mouse_hover_area?</h3><p class='desc'>Renvoi true si la souris est dans la zone, false sinon</p><p class='args'><ul><li><span class='name_args'>Zone</span>
+<span class='type_args'>none</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_square_hover_area?' name='mouse_square_hover_area?'>mouse_square_hover_area?</h3><p class='desc'>Renvoi true si la souris est dans la zone, false sinon (pour une zone définie en case)</p><p class='args'><ul><li><span class='name_args'>Zone</span>
+<span class='type_args'>none</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_clicked_area?' name='mouse_clicked_area?'>mouse_clicked_area?</h3><p class='desc'>Renvoi true si la souris clic (en continu) la zone, false sinon</p><p class='args'><ul><li><span class='name_args'>Zone</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_triggered_area?' name='mouse_triggered_area?'>mouse_triggered_area?</h3><p class='desc'>Renvoi true si la souris clic ponctuellement la zone, false sinon</p><p class='args'><ul><li><span class='name_args'>Zone</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_repeated_area?' name='mouse_repeated_area?'>mouse_repeated_area?</h3><p class='desc'>Renvoi true si la souris clic (de manière répétée) la zone, false sinon</p><p class='args'><ul><li><span class='name_args'>Zone</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_released_area?' name='mouse_released_area?'>mouse_released_area?</h3><p class='desc'>Renvoi true si la souris est relâchée sur la zone, false sinon</p><p class='args'><ul><li><span class='name_args'>Zone</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_square_clicked_area?' name='mouse_square_clicked_area?'>mouse_square_clicked_area?</h3><p class='desc'>Renvoi true si la souris clic (en continu) la zone, false sinon (pour une zone définie en case)</p><p class='args'><ul><li><span class='name_args'>Zone</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_square_triggered_area?' name='mouse_square_triggered_area?'>mouse_square_triggered_area?</h3><p class='desc'>Renvoi true si la souris clic (ponctuellement) la zone, false sinon (pour une zone définie en case)</p><p class='args'><ul><li><span class='name_args'>Zone</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_square_repeated_area?' name='mouse_square_repeated_area?'>mouse_square_repeated_area?</h3><p class='desc'>Renvoi true si la souris clic (de manière répétée) la zone, false sinon (pour une zone définie en case)</p><p class='args'><ul><li><span class='name_args'>Zone</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='mouse_square_released_area?' name='mouse_square_released_area?'>mouse_square_released_area?</h3><p class='desc'>Renvoi true si la souris est relâchée sur la zone, false sinon (pour une zone définie en case)</p><p class='args'><ul><li><span class='name_args'>Zone</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='create_textfield' name='create_textfield'>create_textfield</h3><p class='desc'>Crée un champs saisissable au clavier</p><p class='args'><ul><li><span class='name_args'>Type de contenu</span>
+<span class='type_args'>enum</span>
+</li><li><span class='name_args'>X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Y</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Largeur</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Texte par défaut</span>
+<span class='type_args'>string</span>
+</li><li><span class='name_args'>Alignement</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='erase_textfield' name='erase_textfield'>erase_textfield</h3><p class='desc'>Supprime un champ de texte</p><p class='args'><ul><li><span class='name_args'>Champ texte</span>
+<span class='type_args'>none</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='get_textfield_value' name='get_textfield_value'>get_textfield_value</h3><p class='desc'>Récupère la valeur d'un champ de texte</p><p class='args'><ul><li><span class='name_args'>Champ texte</span>
+<span class='type_args'>none</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='set_textfield_value' name='set_textfield_value'>set_textfield_value</h3><p class='desc'>Attribue une valeur à un champ de texte</p><p class='args'><ul><li><span class='name_args'>Champ texte</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Valeur</span>
+<span class='type_args'>string</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='activate_textfield' name='activate_textfield'>activate_textfield</h3><p class='desc'>Active un champ de texte</p><p class='args'><ul><li><span class='name_args'>Champ texte</span>
+<span class='type_args'>none</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='unactivate_textfield' name='unactivate_textfield'>unactivate_textfield</h3><p class='desc'>désactive un champ de texte</p><p class='args'><ul><li><span class='name_args'>Champ texte</span>
+<span class='type_args'>none</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='textfield_actived?' name='textfield_actived?'>textfield_actived?</h3><p class='desc'>Renvoi si un champ est activé (true), ou non (false)</p><p class='args'><ul><li><span class='name_args'>Champ texte</span>
+<span class='type_args'>none</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='unactivate_all_textfield' name='unactivate_all_textfield'>unactivate_all_textfield</h3><p class='desc'>Désactive tous les champs textes</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='textfield_hover?' name='textfield_hover?'>textfield_hover?</h3><p class='desc'>Renvoi true si la souris est sur un champ de texte, false sinon</p><p class='args'><ul><li><span class='name_args'>Champ texte</span>
+<span class='type_args'>none</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='textfield_clicked?' name='textfield_clicked?'>textfield_clicked?</h3><p class='desc'>Renvoi true si la souris clic sur un champ de texte, false sinon</p><p class='args'><ul><li><span class='name_args'>Champ texte</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Touche</span>
+<span class='type_args'>enum</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='textfield_visibility' name='textfield_visibility'>textfield_visibility</h3><p class='desc'>Affiche (true) ou non (false) un champ de texte</p><p class='args'><ul><li><span class='name_args'>Champ texte</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Touche</span>
+<span class='type_args'>bool</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='textfield_opacity' name='textfield_opacity'>textfield_opacity</h3><p class='desc'>Change l'opacité d'un champ de texte</p><p class='args'><ul><li><span class='name_args'>Champ texte</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Opacité</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='textfield_tone' name='textfield_tone'>textfield_tone</h3><p class='desc'>Change la teinte d'un champ de texte</p><p class='args'><ul><li><span class='name_args'>Champ texte</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Rouge</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Vert</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Bleu</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Gris</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='server_connect' name='server_connect'>server_connect</h3><p class='desc'>Se connecte à un serveur, renvoi le socket de la connexion</p><p class='args'><ul><li><span class='name_args'>Adresse IP</span>
+<span class='type_args'>string</span>
+</li><li><span class='name_args'>Port</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='server_send' name='server_send'>server_send</h3><p class='desc'>Envoi un message au serveur</p><p class='args'><ul><li><span class='name_args'>Socket</span>
+<span class='type_args'>none</span>
+</li><li><span class='name_args'>Message</span>
+<span class='type_args'>string</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='server_recv' name='server_recv'>server_recv</h3><p class='desc'>Reçoit un message du serveur</p><p class='args'><ul><li><span class='name_args'>Socket</span>
+<span class='type_args'>none</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='server_wait_recv' name='server_wait_recv'>server_wait_recv</h3><p class='desc'>Attend du serveur une réponse</p><p class='args'><ul><li><span class='name_args'>Socket</span>
+<span class='type_args'>none</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='server_close_connection' name='server_close_connection'>server_close_connection</h3><p class='desc'>Ferme la connexion au serveur</p><p class='args'><ul><li><span class='name_args'>Socket</span>
+<span class='type_args'>none</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='server_single_connect' name='server_single_connect'>server_single_connect</h3><p class='desc'>Crée une connexion unique a un serveur (donc sans relais de socket)</p><p class='args'><ul><li><span class='name_args'>Adresse IP</span>
+<span class='type_args'>string</span>
+</li><li><span class='name_args'>Port</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='server_single_send' name='server_single_send'>server_single_send</h3><p class='desc'>Envoi un message au serveur unique</p><p class='args'><ul><li><span class='name_args'>Message</span>
+<span class='type_args'>string</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='server_single_recv' name='server_single_recv'>server_single_recv</h3><p class='desc'>Reçoit un message du serveur unique</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='server_single_wait_recv' name='server_single_wait_recv'>server_single_wait_recv</h3><p class='desc'>Attend du serveur unique une réponse</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='server_single_close_connection' name='server_single_close_connection'>server_single_close_connection</h3><p class='desc'>Ferme la connexion au serveur unique</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='include_page' name='include_page'>include_page</h3><p class='desc'>Appel une page d'un autre évènement</p><p class='args'><ul><li><span class='name_args'>Id de la Map</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Id de l'évènement</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Id de la page</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='invoke_event' name='invoke_event'>invoke_event</h3><p class='desc'>Appel une page d'un autre évènement</p><p class='args'><ul><li><span class='name_args'>Id de la Map</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Id de l'évènement</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Nouvel ID</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Position en X</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Position en Y</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div><div class='d'><h3 id='windows_username' name='windows_username'>windows_username</h3><p class='desc'>Renvoi le nom de la session Windows</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='angle_xy' name='angle_xy'>angle_xy</h3><p class='desc'>Renvoi l'angle par rapport à l'axe horizontal entre deux points</p><p class='args'><ul><li><span class='name_args'>Point X1</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Point Y1</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Point X2</span>
+<span class='type_args'>int</span>
+</li><li><span class='name_args'>Point Y2</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='rtp_path' name='rtp_path'>rtp_path</h3><p class='desc'>Renvoi le répertoire d'installation du RTP</p><p class='args'><ul></ul></p><strong>Renvoi :</strong> <span class='return'>Oui</spans></div><div class='d'><h3 id='message_height' name='message_height'>message_height</h3><p class='desc'>Change la hauteur des messages</p><p class='args'><ul><li><span class='name_args'>Nombre de ligne</span>
+<span class='type_args'>int</span>
+</li></ul></p><strong>Renvoi :</strong> <span class='return'>Non</spans></div></div><hr style="clear:both;visibility:hidden"/>
+      Réalisé par <a href="http://funkywork.github.io">Funkywork</a>
+    </div>
+  </body>
+</html> 

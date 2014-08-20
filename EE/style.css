@@ -11,7 +11,7 @@ body{
     padding-top: 50px;
 }
 header{
-    position: fixed; 
+    position: absolute; 
     top: 0px;
     left: 0px;
     width: 100%;
@@ -73,6 +73,33 @@ a{
 a:hover{
     color:#FF0000;
 }
+
+.d{
+    padding: 10px; 
+    margin: 5px;
+}
+
+.name_args{
+    font-weight: bold;
+}
+.type_args{
+    font-weight: normal;
+    border-left:1px solid  #009DFF;;
+    padding-left: 5px;
+}
+
+.navv{
+    width: 20%;
+    float:left;
+    background-color: #1d272d;
+    padding: 10px;
+}
+.ccc{
+    width:80%;
+    float:left;
+    padding-left: 20px;
+}
+
 @media screen and (max-width: 860px){
     #content{
 	width : 100%;
