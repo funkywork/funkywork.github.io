@@ -4,68 +4,162 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: #009DFF;
-    color: #FFFFFF;
-    font-family: Arial, Verdana, sans-serif;
-    padding-top: 50px;
-}
-header{
-    position: fixed; 
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    background-color: #1d272d;
-    height: 50px;
-    display: table;
-    z-index: 9999;
-}
-header h1{
-    margin: 0px;
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 20px;
-    color: #86B5CE;
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* CSS shortcut */
+.BFC{overflow: hidden;}
+.left{float:left;}
+.right{float:right;}
+.both{clear: both;}
+.hidden{visibility: hidden;}
+.no_display{display:none;}
+.line{clear: both;}
+
+.line:after{
+    content: "";
+    display: table; 
+    clear: both;
+}
+
+.stop_float{
+    visibility: hidden;
+    clear: both;
+}
+
+.center{
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+
+/*  Components 
+    usefull class to represent particular components
+*/
+
+.list{
+    display: list-item;
+}
+
+.paragraph{
+    text-align: justify; 
+    text-justify: inter-word;
+}
+
+.button{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.row{
+    display: table;
+    table-layout: fixed; 
+    width: 100%;
+}
+.row > *, .col{
+    display: table-cell; 
+    vertical-align: top;
+}
+.grid{
+    overflow:hidden;
+    margin: 0;
+}
+
+.grid > * {
+    text-align: left; 
+    display: block;
+    padding:0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0; 
+    margin-bottom: 0;
+}
+.grid > * > * {
+    display: inline-block;
+    padding: 0;
+    margin: -1px; 
+    vertical-align: top;
+}
+.two-cells > * {width: 50%;}
+.three-cells > * {width: 33.333%;}
+.four-cells > * {width: 25%; }
+.five-cells > * {width: 20%; }
+.six-cells > * {width: 16.667%; }
+
+
+/* Quoted decoration */
+.quoted{quotes: "«\00A0" "\00A0»";}
+.quoted:before{content: open-quote;}
+.quoted:after{content: close-quote;}
+
+
+/* Media queries */
+@media (max-width: 1024px){
+    .five-cells > *, 
+    .six-cells > * {width: 33.333%} 
+}
+@media (max-width: 480px){
+    .nav > *{
+	display: list-item;
+    } 
+
+    .three-cells > *, 
+    .four-cells > *, 
+    .five-cells > *, 
+    .six-cells > * {width: 50%} 
+}
+@media (max-width: 478px){
+    .grid > * > *{width: 100%;}
+}
+
+/* Design de l'application */
+body{
+    font-family: Arial;
+    color: #2D5166;
+}
+#content{
+    margin: auto;
+    max-width: 640px;
+}
+h1{
+    font-family:"Arial Black", sans-serif;
+    font-size: 300%;
+    font-weight: bold;
+}
 .logo::first-letter{
     font-style: italic; 
     font-weight : bold;
 }
 
-#content{
-    width : 60%;
-    margin: auto; 
-    padding: 30px;
+ul{
+    padding-left: 32px;
+}
+ul > li{
+    padding: 4px;
+    border-bottom: 2px solid white;
+    margin: 2px;
+    margin-right: 26px;
+    /* background-color: #F9FBFB; */
+}
+ul > li > a{
+    text-decoration: none; 
+    color: #2D5166;
+    margin-left: 12px;
+    display:block;
 }
 
-#content h2{
-    margin: 0px;
-}
-
-#content ul{
-    padding: 10px;
-}
-#content ul li{
-    display: inline-block;
-    margin-bottom: 4px;
-    background-color: #FFFFFF;
-    text-decoration: none;
+.bgr{
+    color: #2D5166;
+    background-color: #F4F7F9;
     font-weight: bold;
-    padding: 10px;
-    font-size: 120%;
-    color: #009DFF;
-}
-#content ul li a{
-    text-decoration: none;
-    color: #009DFF;
-}
-@media screen and (max-width: 860px){
-    #content{
-	width : 100%;
-    }
-    .bline{
-	display: block;
-	width: 100%;
-    }
 }
